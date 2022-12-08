@@ -65,7 +65,7 @@ if (animItems.length > 0) {
             if (animItemHeight > window.innerHeight) {
                 animItemPoint = window.innerHeight - window.innerHeight / animStart;
             }
-            //pageXOffset - количестао прокрученных пикселей
+            //pageXOffset - количество прокрученных пикселей
             if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
                 animItem.classList.add('_active');
                 countStart(noRepeat);    //    start animation count

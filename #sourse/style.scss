@@ -484,6 +484,7 @@ $darkGrayColor: #616161;
 		line-height: 75px;
 		font-family: "Montserrat" sans-serif;
 		font-weight: 700;
+		z-index: 2;
 		@media (max-width: 1250px) {
 			font-size: 40px;
 		}
@@ -497,6 +498,7 @@ $darkGrayColor: #616161;
 		position: absolute;
 		left: 700px;
 		bottom: 0px;
+		z-index: 1;
 		@media (max-width: 1250px) {
 			left: 500px;
 			//display: none;
@@ -860,7 +862,8 @@ $darkGrayColor: #616161;
 		}
 		@media (max-width: 500px) {
 			//max-width: 300px;
-			font-size: 28px;
+			font-size: 26px;
+			word-wrap: break-word;
 		}
 	}
 
@@ -879,6 +882,7 @@ $darkGrayColor: #616161;
 			padding: 50px 0 50px 0;
 		}
 		@media (max-width: 500px) {
+			font-size: 22px;
 			padding: 25px 0 25px 0;
 		}
 	}
@@ -901,6 +905,9 @@ $darkGrayColor: #616161;
 			//max-height: 27px;
 			padding-left: 33px;
 			margin-top: 10px;
+			@media (max-width: 500px) {
+				word-wrap: break-word;
+			}
 		}
 	}
 }
@@ -1008,12 +1015,11 @@ $darkGrayColor: #616161;
 		@media (max-width: 470px) {
 			font-size: 24px;
 			left: 50px;
-			max-width: 350px;
+			max-width: 300px;
 		}
 		@media (max-width: 350px) {
 			font-size: 22px;
 			left: 30px;
-			max-width: 350px;
 		}
 	}
 
@@ -1058,7 +1064,7 @@ $darkGrayColor: #616161;
 		width: 140px;
 		height: 67px;
 		margin-right: 15px;
-		@media (max-width: 400px) {
+		@media (max-width: 700px) {
 			display: none;
 		}
 	}
@@ -1372,14 +1378,14 @@ $darkGrayColor: #616161;
 		min-height: 100%;
 	}
 
-	&__masc::after{
+	&__masc::after {
 		content: "";
 		height: 27px;
 		width: 27px;
 		position: absolute;
 		right: 150px;
 		top: 37px;
-		border: 5px solid #E1E1E1;
+		border: 5px solid #e1e1e1;
 		border-radius: 50%;
 	}
 
@@ -1416,11 +1422,9 @@ $darkGrayColor: #616161;
 		z-index: 3;
 		color: #ffffff;
 		@media (max-width: 760px) {
-			
 			font-size: 32px;
 		}
 		@media (max-width: 500px) {
-			
 			font-size: 28px;
 		}
 	}
