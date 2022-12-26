@@ -19,7 +19,6 @@ iconMenu.addEventListener("click", function (e) {
 })
 
 // ========== Animation count ========== //
-//document.body.innerHTML = "";
 
 let noRepeat = true;
 
@@ -72,12 +71,12 @@ if (animItems.length > 0) {
             } else {
                 if (!animItem.classList.contains('_anim-no-hide')) {
                     animItem.classList.remove('_active');
-                   // noRepeat = true;
+                    // noRepeat = true;
                 }
             }
         }
     }
-    function offset(el) {    // позволяет получить позицию обьекта относительно верха страници ((el).top)
+    function offset(el) {
         const rect = el.getBoundingClientRect(),
             scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
             scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -94,7 +93,6 @@ new Swiper('.slider__container', {
     navigation: {
         nextEl: '.slider__button-next',
         prevEl: '.slider__button-prev',
-        //nextEl: '.slider__button-next',
     },
     autoplay: {
         delay: 2000,
@@ -127,3 +125,38 @@ new Swiper('.slider__container', {
         }
     }
 });
+
+
+
+// ========== labuda ========= //
+
+function SomePerson(name, age) {
+    this.name = name;
+    this.age = age;
+    this.admin = false;
+}
+
+let thisPerson = new SomePerson("Vasya", 25);
+
+SomePerson.admin = true;
+
+// ========== inputFocus ========== //
+
+let fieldValue = document.querySelectorAll(".form__input");
+
+
+for (let i = 0; i < fieldValue.length; i++) {
+
+    let defaultValue = fieldValue[i].value;
+
+    fieldValue[i].addEventListener("blur", function () { 
+        if (fieldValue[i].value == "") {
+            fieldValue[i].value = defaultValue;
+        }
+    });
+    fieldValue[i].addEventListener("focus", function () { 
+        if (fieldValue[i].value == defaultValue) {
+            fieldValue[i].value = "";
+        }
+    });  
+}
